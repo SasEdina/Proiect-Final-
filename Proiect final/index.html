@@ -7,6 +7,7 @@
 
     <title>Commerce App</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css" />
     <script
       src="https://kit.fontawesome.com/fc0b80239e.js"
       crossorigin="anonymous"
@@ -14,6 +15,16 @@
     <script src="index.js"></script>
 </head>
 <body>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>To be modified</p>
+    </div>
+  
+  </div>
 
   <div id="cart-items">
     <!-- Aici se vor afișa produsele din coș -->
@@ -29,6 +40,7 @@
             <a href="products.html" class="nav__link"> Products </a>
             <a href="" class="nav__link">
               <i class="fa-solid fa-cart-shopping nav__link__icon"></i>
+              <div id="shop-cart-count">12</div>
             </a>
           </div>
           <button class="nav__menu" onclick="openMenu()">
@@ -290,7 +302,7 @@
                 placeholder="Enter Email Address"
                 class="newsletter__form__input"
               />
-              <button class="newsletter__form__submit">Subscribe</button>
+              <button class="newsletter__form__submit" id="subscribeBtn">Subscribe</button>
             </form>
           </div>
         </div>
