@@ -34,4 +34,28 @@ document.addEventListener("DOMContentLoaded", () => {
             addToCart(name, price);
         });
     });
+
+
+    initShopCount();
 });
+
+//Lista de cumparaturi
+const shopList = [];
+
+function initShopCount() {
+    const addToCartButtons = document.getElementById("shop-cart-count");
+    addToCartButtons.innerHTML= shopList.length;
+}
+
+function addToCart(name, price) {
+
+    const newItem = {
+        name: name,
+        price: price,
+    }
+
+    shopList.push(newItem);
+
+    const addToCartButtons = document.getElementById("shop-cart-count");
+    addToCartButtons.innerHTML= shopList.length;
+}
